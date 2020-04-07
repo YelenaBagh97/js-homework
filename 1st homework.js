@@ -1,5 +1,4 @@
 //1. odd or even
-
 function oddOrEven(a) {
     if (a % 2 === 0) {
         return "even";
@@ -18,7 +17,6 @@ function isDivisible(a, b) {
 }
 
 //3. triangle angles
-
 function triangle(a, b) {
     return 180 - (a + b);
 }
@@ -30,7 +28,6 @@ function nNumber(n) {
 }
 
 //5. last digit to the beginning
-
 function lastToFirst(a) {
     if (a % 10 !== 0) {
         let b = (a % 10).toString();
@@ -40,14 +37,12 @@ function lastToFirst(a) {
 }
 
 //6. calculate average
-
 function average(a, b, c, d, e) {
     let sum = a + b + c + d + e;
     return sum / 5;
 }
 
 //7. check if multiple of 3, 5 or 7
-
 function isMultiple(a) {
     if ((a % 3 === 0 && a % 5 === 0) || (a % 3 === 0 && a % 7 === 0) || (a % 5 === 0 && a % 7 === 0) || (a % 3 === 0 && a % 5 === 0 && a % 7 === 0)) {
         if (a % 3 === 0 && a % 5 === 0) {
@@ -73,7 +68,6 @@ function isMultiple(a) {
 }
 
 //8. check whether it's a baby
-
 function checkIfBabyOrAdult(age, time) {
     if (age >= 1 && age <= 12 && time === "months") {
         return "baby";
@@ -91,7 +85,6 @@ function checkIfBabyOrAdult(age, time) {
 }
 
 //9. ascending order 3 numbers
-
 function ascending(a, b, c) {
     let tmp = 0;
     if (a > b) {
@@ -113,7 +106,6 @@ function ascending(a, b, c) {
 }
 
 //10. student passed or not
-
 function passedOrNot(a, b, c) {
     if ((a + b + c) / 3 >= 50 || (a >= 40 && b >= 40 && c >= 40)) {
         return "Passed";
@@ -124,7 +116,6 @@ function passedOrNot(a, b, c) {
 }
 
 //11. find the sign of product
-
 function findTheSign(a, b, c) {
     if (a === 0 || b === 0 || c === 0) {
         return "unsigned";
@@ -137,7 +128,6 @@ function findTheSign(a, b, c) {
 
 
 //12. solve quadratic equation
-
 function rootOfQuadratic(a, b, c) {
     if (a !== 0) {
         let D = Math.pow(b, 2) - (4 * a * c);
@@ -156,7 +146,6 @@ function rootOfQuadratic(a, b, c) {
 }
 
 //13. simplify if
-
 function simpleIf() {
     var n = +prompt();
     var i = 0;
@@ -171,7 +160,6 @@ function simpleIf() {
 }
 
 //14. Check if number contains digits
-
 function doesNumberContainDigit(a, b) {
     if (b.toString().includes(a.toString())) {
         return "Yes";
@@ -182,7 +170,6 @@ function doesNumberContainDigit(a, b) {
 }
 
 //15. Reverse first and last digits
-
 function reverse(a) {
     let c = Math.floor(a / 10).toString();
     return a % 10 + c.substring(1, c.length) + c.charAt(0);
@@ -191,7 +178,6 @@ function reverse(a) {
 //16. aaa
 
 //17. area of triangle or rectangle
-
 function calculateArea(figure, height, base) {
     if (height > 0 && base > 0) {
         if (figure === "triangle") {
@@ -206,7 +192,6 @@ function calculateArea(figure, height, base) {
 }
 
 //18. find the difference of biggest and smallest digits
-
 function diffBetweenMaxAndMin(a) {
 
     let max = 0;
