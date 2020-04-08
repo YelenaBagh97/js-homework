@@ -44,24 +44,20 @@ function average(a, b, c, d, e) {
 
 //7. check if multiple of 3, 5 or 7
 function isMultiple(a) {
-    if ((a % 3 === 0 && a % 5 === 0) || (a % 3 === 0 && a % 7 === 0) || (a % 5 === 0 && a % 7 === 0) || (a % 3 === 0 && a % 5 === 0 && a % 7 === 0)) {
-        if (a % 3 === 0 && a % 5 === 0) {
-            return a + " is a multiple of 3, 5";
-        } else if (a % 3 === 0 && a % 7 === 0) {
-            return a + " is a multiple of 3, 7";
-        } else if (a % 5 === 0 && a % 7 === 0) {
-            return a + " is a multiple of 7, 5";
-        } else if (a % 3 === 0 && a % 5 === 0 && a % 7 === 0) {
-            return a + " is a multiple of 3, 7 and 5"
-        }
-    } else if (a % 3 === 0 || a % 5 === 0 || a % 7 === 0) {
-        if (a % 3 === 0) {
-            return a + " is a multiple of 3";
-        } else if (a % 5 === 0) {
-            return a + " is a multiple of 5";
-        } else if (a % 7 === 0) {
-            return a + " is a multiple of 7";
-        }
+    if (a % 3 === 0 && a % 5 === 0) {
+        return a + " is a multiple of 3, 5";
+    } else if (a % 3 === 0 && a % 7 === 0) {
+        return a + " is a multiple of 3, 7";
+    } else if (a % 5 === 0 && a % 7 === 0) {
+        return a + " is a multiple of 7, 5";
+    } else if (a % 3 === 0 && a % 5 === 0 && a % 7 === 0) {
+        return a + " is a multiple of 3, 7 and 5";
+    } else if (a % 3 === 0) {
+        return a + " is a multiple of 3";
+    } else if (a % 5 === 0) {
+        return a + " is a multiple of 5";
+    } else if (a % 7 === 0) {
+        return a + " is a multiple of 7";
     } else {
         return a + " is not a multiple of 3, 7 or 5";
     }
@@ -86,22 +82,18 @@ function checkIfBabyOrAdult(age, time) {
 
 //9. ascending order 3 numbers
 function ascending(a, b, c) {
-    let tmp = 0;
-    if (a > b) {
-        tmp = a;
-        a = b;
-        b = tmp;
-        return (a + "," + b + "," + c);
-    } else if (a > c) {
-        tmp = a;
-        a = c;
-        c = tmp;
-        return (a + "," + b + "," + c);
-    } else if (b > c) {
-        tmp = b;
-        b = c;
-        c = tmp;
-        return (a + "," + b + "," + c);
+    if (a < b && a < c) {
+        if (b < c) {
+            return a + "," + b + "," + c;
+        } else return a + "," + c + "," + b;
+    } else if (b < a && b < c) {
+        if (a < c) {
+            return b + "," + a + "," + c;
+        } else return b + "," + c + "," + a;
+    } else if (c < a && c < b) {
+        if (a < b) {
+            return c + "," + a + " " + b;
+        } else return c + "," + b + "," + a;
     }
 }
 
