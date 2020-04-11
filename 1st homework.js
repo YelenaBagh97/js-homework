@@ -171,7 +171,11 @@ function reverse(a) {
     return a % 10 + c.substring(1, c.length) + c.charAt(0);
 }
 
-//16. aaa
+//16. floor to multiplies of 50
+function floorToMultiplier(a) {
+    return Math.round(a / 50) * 50;
+
+}
 
 //17. area of triangle or rectangle
 function calculateArea(figure, height, base) {
