@@ -82,18 +82,22 @@ function checkIfBabyOrAdult(age, time) {
 
 //9. ascending order 3 numbers
 function ascending(a, b, c) {
-    if (a < b && a < c) {
-        if (b < c) {
-            return a + "," + b + "," + c;
-        } else return a + "," + c + "," + b;
-    } else if (b < a && b < c) {
-        if (a < c) {
-            return b + "," + a + "," + c;
-        } else return b + "," + c + "," + a;
-    } else if (c < a && c < b) {
-        if (a < b) {
-            return c + "," + a + " " + b;
-        } else return c + "," + b + "," + a;
+    let tmp = 0;
+    if (a > b) {
+        tmp = a;
+        a = b;
+        b = tmp;
+        return (a + "," + b + "," + c);
+    } else if (a > c) {
+        tmp = a;
+        c = a;
+        c = tmp;
+        return (a + "," + b + "," + c);
+    } else if (b > c) {
+        tmp = b;
+        b = c;
+        c = tmp;
+        return (a + "," + b + "," + c);
     }
 }
 
