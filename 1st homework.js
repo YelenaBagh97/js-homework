@@ -168,7 +168,7 @@ function doesNumberContainDigit(a, b) {
 //15. Reverse first and last digits
 function reverse(a) {
     let c = Math.floor(a / 10).toString();
-    return a % 10 + c.substring(1, c.length) + c.charAt(0);
+    return a % 10 + c.substring(1, c.length) + c[0];
 }
 
 //16. floor to multiplies of 50
