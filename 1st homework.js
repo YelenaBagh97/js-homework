@@ -90,7 +90,7 @@ function ascending(a, b, c) {
         return (a + "," + b + "," + c);
     } else if (a > c) {
         tmp = a;
-        c = a;
+        a = c;
         c = tmp;
         return (a + "," + b + "," + c);
     } else if (b > c) {
