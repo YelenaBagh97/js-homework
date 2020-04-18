@@ -1,6 +1,6 @@
 //1. print yes if prime
 function yesIfPrime(n) {
-    for (let i = 2; i < n; i++) {
+    for (let i = 2; i < Math.floor(n); i++) {
         if (n % i === 0) {
             return "no";
         }
@@ -58,22 +58,17 @@ function secMaxIndex(a) {
 
 //11. padding and repeat
 function padAndRepeat(a, p, r) {
-    let m = 0;
     if (p < a.length) {
-        let a1 = [];
-        let a2 = [];
-        while (m < r) {
-            for (let i = 0; i < p; i++) {
-                a1.push(a[i]);
+        let start = a.slice(0, p);
+        let end = a.slice(a.length - p, a.length);
+        for (let i = 0; i < r; i++) {
+            for (let j = 0; j <= start.length; j++) {
+                a.unshift(start[start.length - j - 1]);
+                a.push(end[j]);
             }
-            for (let j = a.length - p; j < a.length; j++) {
-                a2.push(a[j]);
-            }
-            m++;
         }
-        return a1.concat(a, a2);
+        return a;
     } else return "Invalid padding amount";
-
 }
 
 function generateFibo(n) {
@@ -83,4 +78,3 @@ function generateFibo(n) {
     }
     return arr;
 }
-
