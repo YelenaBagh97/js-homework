@@ -11,11 +11,10 @@ let isUniqueOnly = (arr = []) => {
 //2. Find the sum of numbers, which square root is even
 let sumOfNumWithEvenSquare = (arr = []) => {
     let sum = 0;
-    for (let i = 0; i < arr.length; i++) {
-        if (Math.sqrt(arr[i]) % 2 === 0) {
-            sum += arr[i];
-        }
-    }
+    arr.forEach((el) => {
+        if (Math.sqrt(el) % 2 === 0) {
+            sum += el;
+    }});
     return sum;
 };
 
@@ -34,12 +33,11 @@ let anagramSublist = (str = "", arr = []) => {
         return str.split("").sort().join("");
     }
 
-    for (let i = 0; i < arr.length; i++) {
-        if ((sortChars(arr[i].toString())).indexOf(sortChars(str)) > -1) {
-            newArr.push(arr[i]);
+    arr.forEach((el) => {
+        if ((sortChars(el.toString())).indexOf(sortChars(str)) > -1) {
+            newArr.push(el);
         }
-    }
+    });
     return newArr;
 
 };
-
